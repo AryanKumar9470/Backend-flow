@@ -1,25 +1,23 @@
-const moongoose  = require('moongoose');
-const { useReducer, useState } = require('react');
+const mongoose = require("mongoose");
 
-//define userschema
-const userSchema = new moongoose.Schema({
-       username:{
-        type:String,
-        required:true,
-        unique:true,
-        trim:true
-       },
-       email:{
-         type: String,
-         required:true,
-         unique:true
-       },
-       password:{
-        type:String,
-        requird:true,
-        // unique:true
-       }
-},{ timestamps: true });
+const userSchema = new mongoose.Schema(
+  {
+    username: {
+      type: String,
+      required: true,
+      unique: true,
+    },
+    email: {
+      type: String,
+      required: true,
+      unique: true,
+    },
+    password: {
+      type: String,
+      required: true,
+    },
+  },
+  { timestamps: true }
+);
 
-const User  = moongoose.model('User',userSchema)
-module.exports = User;
+module.exports = mongoose.model("User", userSchema);
