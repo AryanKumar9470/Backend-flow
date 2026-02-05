@@ -1,0 +1,22 @@
+{
+  "name": "rushbackend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cloudinary": "^2.9.0",
+    "express": "^5.2.1",
+    "moongoose": "^0.0.5",
+    "multer": "^2.0.2",
+    "nodemailer": "^8.0.0",
+    "nodemon": "^3.1.11"
+  }
+}
